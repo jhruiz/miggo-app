@@ -1,0 +1,29 @@
+[{
+        "icon": "logo-youtube",
+        "color": "youtube",
+        "redirectTo": "https://www.youtube.com/channel/UCbBdwWl_UAnMAcGtl8Jn5mA",
+        "system": "_system",
+        "location": "location=yes"
+    },
+    {
+        "icon": "logo-facebook",
+        "color": "facebook",
+        "redirectTo": "https://www.facebook.com/TorqueRacingSAS",
+        "system": "_system",
+        "location": "location=yes"
+    },
+    {
+        "icon": "logo-instagram",
+        "color": "instagram",
+        "redirectTo": "https://www.instagram.com/torqueracingsas",
+        "system": "_system",
+        "location": "location=yes"
+    },
+    {
+        "icon": "globe-outline",
+        "color": "twitter",
+        "redirectTo": "http://torqueracingcolombia.com/",
+        "system": "_system",
+        "location": "location=yes"
+    }
+]

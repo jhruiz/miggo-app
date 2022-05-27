@@ -1,0 +1,49 @@
+<ion-content>
+    <div>
+        <div class="header">
+            <div class="title">
+                <ion-slides pager=true class="slide-full" [options]="slideOptHeaderOpt">
+                    <ion-slide *ngFor="let slide of slideImgHeader">
+                        <img [src]="slide.img" class="slide-image">
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+        <div class="body container">
+            <ion-list>
+
+                <ion-item class="margin-bottom-20">
+
+                    <ion-icon name="car-sport" slot="start" color="basemiggo">
+                    </ion-icon>
+
+                    <ion-input placeholder="Placa del vehículo" #licensePlate></ion-input>
+
+                </ion-item>
+
+                <ion-button expand="full" color="basemiggo" class="margin-bottom-20" (click)="getVehicle()">
+                    <ion-icon name="enter" slot="start"></ion-icon>
+                    Ingresar
+                </ion-button>
+
+                <ion-button expand="full" color="basemiggo" (click)="scanQRCode()">
+                    <ion-icon name="qr-code" slot="start"></ion-icon>
+                    Scanear código
+                </ion-button>
+
+            </ion-list>
+        </div>
+
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <div class="footer">
+            <ion-slides pager=true class="slide-full" [options]="slideOptFooterOpt">
+                <ion-slide *ngFor="let slide of slideImgFooter">
+                    <img [src]="slide.img" class="slide-image">
+                </ion-slide>
+            </ion-slides>
+        </div>
+    </ion-toolbar>
+</ion-footer>

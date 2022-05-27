@@ -1,0 +1,68 @@
+<app-header titulo="Información del vehículo"></app-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-list-header class="list-header">
+            <ion-label color="basemiggo">DATOS DEL VEHÍCULO</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-icon name="settings-outline" slot="start" color="miggopurple" class="zoom-1-5"></ion-icon>
+            <ion-label>
+                <h2 class="customer">Placa</h2>
+                <h3> {{ vehicle.placa }} </h3>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="bicycle-outline" slot="start" color="miggopurple" class="zoom-1-5"></ion-icon>
+            <ion-label>
+                <h2 class="customer">Marca</h2>
+                <h3> {{ vehicle.marca }} {{ vehicle.linea }} </h3>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="speedometer-outline" slot="start" color="miggopurple" class="zoom-1-5"></ion-icon>
+            <ion-label>
+                <h2 class="customer">Cilindraje</h2>
+                <h3> {{ vehicle.cilindraje }} </h3>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="calendar-outline" slot="start" color="miggopurple" class="zoom-1-5"></ion-icon>
+            <ion-label>
+                <h2 class="customer">Modelo</h2>
+                <h3> {{ vehicle.modelo }}</h3>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="color-palette-outline" slot="start" color="miggopurple" class="zoom-1-5"></ion-icon>
+            <ion-label>
+                <h2 class="customer">Color</h2>
+                <h3> {{ vehicle.color }} </h3>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="medkit-outline" slot="start" color="miggopurple" class="zoom-1-5"></ion-icon>
+            <ion-label>
+                <h2 class="customer">Soat</h2>
+                <h3> {{ vehicle.soat }} </h3>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="construct-outline" slot="start" color="miggopurple" class="zoom-1-5"></ion-icon>
+            <ion-label>
+                <h2 class="customer">Tecnomecánica</h2>
+                <h3> {{ vehicle.tecno }}</h3>
+            </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

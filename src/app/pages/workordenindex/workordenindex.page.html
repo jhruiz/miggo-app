@@ -1,0 +1,42 @@
+<app-header titulo="Listado de ordenes"></app-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let wo of workOrders">
+    <ion-card-header>
+      <ion-card-subtitle>Orden de trabajo</ion-card-subtitle>
+      <ion-card-title class="bold-text"># {{ wo.codigo }} </ion-card-title>        
+    </ion-card-header>
+
+    <ion-item>
+      <ion-icon name="person-outline" color="miggopurple" slot="start"></ion-icon>
+      <ion-label> {{ wo.cliente }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="build-outline" color="miggopurple" slot="start"></ion-icon>
+      <ion-label> {{ wo.tecnico }}</ion-label>
+    </ion-item>
+
+    <ion-footer>
+      <ion-item>
+        <ion-icon name="construct-outline" 
+                  color="miggopurple" 
+                  slot="start"></ion-icon>
+        <ion-label> {{ wo.descripcion }}</ion-label>
+
+        <ion-item>
+          <ion-button color="basemiggo" (click)="viewWorkOrder( wo.id )">
+              <ion-icon name="eye-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="basemiggo" (click)="printWorkOrder( wo.id )">
+              <ion-icon name="download-outline"></ion-icon>
+          </ion-button>
+        </ion-item>          
+      
+      </ion-item>
+    </ion-footer>
+  
+  </ion-card>
+
+</ion-content>

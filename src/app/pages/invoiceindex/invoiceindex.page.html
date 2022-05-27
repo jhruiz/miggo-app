@@ -1,0 +1,46 @@
+<app-header titulo="Listado de facturas"></app-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let inv of invoices">
+        <ion-card-header>
+            <div *ngIf="inv.consecutivodian">
+                <ion-card-subtitle>Factura</ion-card-subtitle>
+                <ion-card-title class="bold-text"># {{ inv.consecutivodian }} </ion-card-title>
+            </div>
+            <div *ngIf="!inv.consecutivodian">
+                <ion-card-subtitle>Remisión</ion-card-subtitle>
+                <ion-card-title class="bold-text"># {{ inv.codigo }} </ion-card-title>
+            </div>
+        </ion-card-header>
+
+        <ion-item>
+            <ion-icon name="person-outline" color="miggopurple" slot="start"></ion-icon>
+            <ion-label> {{ inv.nombre }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="calendar-outline" color="miggopurple" slot="start"></ion-icon>
+            <ion-label> {{ inv.created }}</ion-label>
+        </ion-item>
+
+        <ion-footer>
+            <ion-item>
+                <ion-icon name="cash-outline" color="verdedinero" slot="start"></ion-icon>
+                <ion-label color="verdedinero"> $ {{ inv.totalPago | number }}</ion-label>
+
+                <ion-item>
+                    <ion-button color="basemiggo" (click)="viewInvoice( inv.id )">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button color="basemiggo" (click)="printInvoice( inv.id )">
+                        <ion-icon name="download-outline"></ion-icon>
+                    </ion-button>
+                </ion-item>
+
+            </ion-item>
+        </ion-footer>
+
+    </ion-card>
+
+</ion-content>

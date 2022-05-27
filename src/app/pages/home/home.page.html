@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="basemiggo">
+
+        <ion-buttons size="small" slot="end" class="ion-padding" color="warning" (click)="logout()">
+            Salir
+        </ion-buttons>
+
+        <ion-title class="ion-text-capitalize"> Principal </ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+    <ion-card *ngFor="let c of componentes | async" (click)="redirectTo(c.redirectTo)">
+        <img [src]="c.img" />
+        <div class="card-title">{{ c.name }}</div>
+    </ion-card>
+
+    <app-miggofab></app-miggofab>
+
+</ion-content>

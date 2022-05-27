@@ -1,0 +1,16 @@
+[{
+        "img": "../assets/img/moto1.jpg",
+        "name": "Facturas",
+        "redirectTo": "invoiceindex"
+    },
+    {
+        "img": "../assets/img/moto2.jpg",
+        "name": "Ordenes de Trabajo",
+        "redirectTo": "workordenindex"
+    },
+    {
+        "img": "../assets/img/moto3.jpg",
+        "name": "Información del Vehículo",
+        "redirectTo": "info-vehicle"
+    }
+]
